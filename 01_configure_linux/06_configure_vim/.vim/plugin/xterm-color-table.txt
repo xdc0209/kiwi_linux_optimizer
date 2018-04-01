@@ -1,0 +1,3 @@
+在vim使用如下命令看到颜色对照表:
+:TXtermColorTable
+
