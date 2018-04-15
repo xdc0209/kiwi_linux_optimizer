@@ -1,4 +1,4 @@
-" ------------------- kiwi vim optimize start ----------------------------------------------
+" ------------------- kiwi vim optimize start -------------------------------------------
 set t_Co=256                            " 虚拟终端一般颜色默认值为8色，需要设置成256色
 
 "colorscheme darkburn                   " 设置配色方案，这是最适合xshell的配色
@@ -27,4 +27,4 @@ hi Type_Debug ctermfg=6                 " 关键字DEBUG显示成蓝色
 hi Search     ctermfg=5   ctermbg=none  " 搜索粉红色
 
 hi CursorLine ctermbg=236 cterm=none    " 当前行暗灰色
-" ------------------- kiwi vim optimize end ------------------------------------------------
+" ------------------- kiwi vim optimize end ---------------------------------------------

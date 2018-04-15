@@ -1,4 +1,4 @@
-# ----------------------------- kiwi common commands start -------------------------------------
+# ----------------------------- kiwi common commands start ------------------------------
 # 按行输出参数，方便人眼查看过多的参数##
 function WordsToLines()
 {
@@ -160,4 +160,4 @@ alias cd....='cd ../../..'
 alias vi='vim'
 alias tailf='tail -f'
 alias grep='grep --color=auto'
-# ----------------------------- kiwi common commands end ---------------------------------------
+# ----------------------------- kiwi common commands end --------------------------------
