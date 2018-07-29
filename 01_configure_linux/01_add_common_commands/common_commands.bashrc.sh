@@ -48,7 +48,7 @@ function Find()
 {
     [ $# -ne 1 ] && echo "Usage: $FUNCNAME <searchString>" && return 1
 
-    find . -iname "*$1*"
+    find . -iname "*$1*" | grep -i --color "$1"
 }
 
 # 简化grep用法##
