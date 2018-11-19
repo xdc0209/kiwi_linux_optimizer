@@ -11,6 +11,7 @@ set ignorecase                          " 搜索忽略大小写，取消忽略 :
 set hlsearch                            " 高亮搜索
 set cursorline                          " 高亮当前行
 set tabstop=4                           " 设置tab所等同的空格长度
+set enc=utf8                            " 设置当前编码。常用编码有utf8、gbk等
 
 syntax keyword Type_Error ERROR Err
 hi Type_Error ctermfg=1                 " 关键字ERROR显示成红色
