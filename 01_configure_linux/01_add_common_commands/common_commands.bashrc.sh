@@ -131,6 +131,25 @@ function TcpConnectionStateCounter()
     netstat -an | awk '/^tcp/ {++status_count_array[$NF]} END{for(status in status_count_array) print status, status_count_array[status]}' | column -t | sort -nr -k2
 }
 
+# 简化tcpdump用法##
+function Tcpdump()
+{
+    if [ $# -eq 1 ]; then
+        local port=$1
+        echo "tcpdump -nSX -s 0 port $port"
+        tcpdump -nSX -s 0 port $port
+    elif [ $# -eq 2 ]; then
+        local ethX=$1
+        local port=$2
+        echo "tcpdump -nSX -s 0 -i $ethX port $port"
+        tcpdump -nSX -s 0 -i $ethX port $port
+    else
+        echo "Usage1: $FUNCNAME <port>"
+        echo "Usage2: $FUNCNAME <ethX> <port>"
+        return 1
+    fi
+}
+
 # 展示帮助信息##
 function HelpLinux()
 {
@@ -144,6 +163,7 @@ function HelpLinux()
     echo 'Netstat                   简化netstat用法'
     echo 'NicRate                   查看网卡速率'
     echo 'TcpConnectionStateCounter 统计各个TCP连接状态的个数'
+    echo 'Tcpdump                   简化tcpdump用法'
     echo
     echo 'HelpLinux                 展示帮助信息'
 }
