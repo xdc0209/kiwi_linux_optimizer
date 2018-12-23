@@ -29,10 +29,11 @@
    | Netstat                   | 简化netstat用法                      |
    | NicRate                   | 查看网卡速率                         |
    | TcpConnectionStateCounter | 统计各个TCP连接状态的个数            |
+   | Tcpdump                   | 简化tcpdump用法                      |
    |                           |                                      |
    | HelpLinux                 | 展示帮助信息                         |
 
-2. 优化命令提示符(重新登陆生效)。  
+2. 优化命令提示符(重新登陆生效)和终端标题。  
 
 3. 增强命令历史功能(重新登陆生效)。  
 
