@@ -30,6 +30,7 @@
    | NicRate                   | 查看网卡速率                         |
    | TcpConnectionStateCounter | 统计各个TCP连接状态的个数            |
    | Tcpdump                   | 简化tcpdump用法                      |
+   | Zip                       | 简化zip用法                          |
    |                           |                                      |
    | HelpLinux                 | 展示帮助信息                         |
 

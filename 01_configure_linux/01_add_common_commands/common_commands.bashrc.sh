@@ -150,6 +150,25 @@ function Tcpdump()
     fi
 }
 
+# 简化zip用法##
+function Zip()
+{
+    # 参数校验。##
+    [ $# -ne 1 ] && echo "Usage: $FUNCNAME <file or dir>" && return 1
+
+    # 定义变量。##
+    local file=$1
+
+    # 如果末尾存在目录分隔符，则去除掉。##
+    file=${file%/}
+
+    # 检查文件是否存在。##
+    [ ! -e $file ] && echo "[$file] does not exist!" && return 1
+
+    # 压缩文件。##
+    zip -r $file-$(date "+%Y%m%d-%H%M%S").zip $file
+}
+
 # 展示帮助信息##
 function HelpLinux()
 {
@@ -164,6 +183,7 @@ function HelpLinux()
     echo 'NicRate                   查看网卡速率'
     echo 'TcpConnectionStateCounter 统计各个TCP连接状态的个数'
     echo 'Tcpdump                   简化tcpdump用法'
+    echo 'Zip                       简化zip用法'
     echo
     echo 'HelpLinux                 展示帮助信息'
 }
